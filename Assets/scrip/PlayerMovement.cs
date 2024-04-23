@@ -1,57 +1,53 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
-    private float moveSpeed;
-    private float jumpForce;
-    private bool isJumping;
-    private float moveHorizontal;
-    private float moveVertical;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
+    private Rigidbody2D rb;
+    private bool isGrounded;
 
-    void Start()
+    private void Awake()
     {
-        rb2D = gameObject.GetComponent<Rigidbody2D>();
-        moveSpeed = 3f;
-        jumpForce = 60f;
-        isJumping = false;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
-        moveHorizontal = Input.GetAxisRaw("Horizontal");
-        moveVertical = Input.GetAxisRaw("Vertical");
-    }
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
 
-    void FixedUpdate()
-    {
-        if (moveHorizontal > 0.1f || moveHorizontal < -0.1f)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse );
-        }
-
-        if (!isJumping && moveVertical > 0.1f)
-        {
-            rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse );
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            isGrounded = false;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void FixedUpdate()
     {
-        if (collision.gameObject.tag == "Platform")
+        // Perform ground check here (e.g., using raycasting) and update isGrounded accordingly
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the player collides with the ground and set isGrounded accordingly
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            isJumping = false;
+            isGrounded = true;
         }
     }
-    void OnTriggerExit2D(Collider2D collision)
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform")
+        // Reset isGrounded if the player leaves the ground
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            isJumping = true;
+            isGrounded = false;
         }
     }
 }
-
