@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67cfe82e-6f35-431e-a959-58ac5e607f9a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.scrip.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.scrip.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprite/Player-removebg-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sprite/Player-removebg-preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprite/Player.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprite/Player.jpg.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectileFierball.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -60,6 +61,7 @@
       <workItem from="1713865081262" duration="3000" />
       <workItem from="1713865093007" duration="21000" />
       <workItem from="1713865549940" duration="620000" />
+      <workItem from="1714143068221" duration="20000" />
     </task>
     <servers />
   </component>
