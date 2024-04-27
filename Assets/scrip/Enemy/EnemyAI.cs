@@ -47,6 +47,13 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    private void flip()
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x *= 1;
+        transform.localScale = localScale;
+    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
