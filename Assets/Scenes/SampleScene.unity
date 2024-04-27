@@ -3917,7 +3917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287155536}
   - component: {fileID: 287155535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4809,7 +4809,7 @@ Transform:
   m_GameObject: {fileID: 449343474}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.09, y: -0.41, z: 0}
+  m_LocalPosition: {x: 47.09, y: -1, z: 0}
   m_LocalScale: {x: 3, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5197,7 +5197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 2147093460}
   target: {fileID: 928742878}
-  bulletPrefabs: {fileID: 0}
+  bulletPrefab: {fileID: 5776794244542551452, guid: ae3ea1a5abdede1448a8650dadd43853, type: 3}
+  bulletLifetime: 3
 --- !u!1 &483288753
 GameObject:
   m_ObjectHideFlags: 0
@@ -17901,7 +17902,7 @@ Transform:
   m_GameObject: {fileID: 1647457785}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.62, y: -1.17, z: 0}
+  m_LocalPosition: {x: 59.18, y: -1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17934,7 +17935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 2147093460}
   target: {fileID: 928742878}
-  bulletPrefabs: {fileID: 1059622532}
+  bulletPrefab: {fileID: 0}
+  bulletLifetime: 3
 --- !u!1 &1648262744
 GameObject:
   m_ObjectHideFlags: 0
@@ -18245,7 +18247,7 @@ Transform:
   m_GameObject: {fileID: 1658357100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.997257, y: -1.8659778, z: 0}
+  m_LocalPosition: {x: 40.34, y: -2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
