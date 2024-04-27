@@ -5,20 +5,30 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] float HP, maxHP = 5f;
+    [SerializeField] float health, maxHealth = 10f;
     
     private float currentHP;
+    [SerializeField] HealthBar healthBar;
+
+    private void Awake()
+    {
+        //healthBar = GetComponentInChildren<HealthBar>();
+    }
 
     private void Start()
     {
-        currentHP = maxHP;
+        health = maxHealth;
+        healthBar.UpdateHealthBar(health, maxHealth);
     }
 
     public void Damage(float damageAmount)
     {
-        currentHP -= damageAmount;
+        health -= damageAmount;
+        
+        //currentHP -= damageAmount;
+        healthBar.UpdateHealthBar(health, maxHealth);
 
-        if (currentHP <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
