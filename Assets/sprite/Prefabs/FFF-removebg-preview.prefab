@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b7140242bbdda48adbf80d0bd74f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatDestroyFierball:
+  whatDestroyFireball:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 512
+  fireballDamage: 1

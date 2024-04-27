@@ -3,23 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] float HP, maxHP = 5f;
+    [SerializeField] float maxHP = 5f;
+    
+    private float currentHP;
 
     private void Start()
     {
-        HP = maxHP;
+        currentHP = maxHP;
     }
 
-    public void TakeDamage(float damageAmount)
+    public void Damage(float damageAmount)
     {
-        HP -= damageAmount; // 5-4-3-2-1 = die
+        currentHP -= damageAmount;
 
-        if (HP <= 0)
+        if (currentHP <= 0)
         {
             Destroy(gameObject);
         }
     }
-    
 }
