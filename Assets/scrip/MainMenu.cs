@@ -25,4 +25,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         print("The button is working");
     }
+
+    public void Quitgame()
+    {
+        Application.Quit();
+    }
 }
