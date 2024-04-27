@@ -26,6 +26,11 @@ public class MainMenu : MonoBehaviour
         print("The button is working");
     }
 
+    public void Win()
+    {
+        SceneManager.LoadSceneAsync("WIN");
+    }
+
     public void Quitgame()
     {
         Application.Quit();

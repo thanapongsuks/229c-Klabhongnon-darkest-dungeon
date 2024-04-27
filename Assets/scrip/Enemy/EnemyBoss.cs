@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBoss : MonoBehaviour, IDamageable
 {
@@ -30,7 +31,9 @@ public class EnemyBoss : MonoBehaviour, IDamageable
 
         if (health <= 0)
         {
+            SceneManager.LoadScene("WIN");
             Destroy(gameObject);
         }
+
     }
 }
