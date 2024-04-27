@@ -19,4 +19,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("MainMenu");
     }
+
+    public void ResetTheGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        print("The button is working");
+    }
 }
