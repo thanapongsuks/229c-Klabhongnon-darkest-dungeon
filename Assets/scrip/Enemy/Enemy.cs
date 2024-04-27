@@ -24,8 +24,6 @@ public class Enemy : MonoBehaviour, IDamageable
     public void Damage(float damageAmount)
     {
         health -= damageAmount;
-        
-        //currentHP -= damageAmount;
         healthBar.UpdateHealthBar(health, maxHealth);
 
         if (health <= 0)

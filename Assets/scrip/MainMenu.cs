@@ -30,6 +30,11 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("WIN");
     }
+    
+    public void Lose()
+    {
+        SceneManager.LoadSceneAsync("Lose");
+    }
 
     public void Quitgame()
     {
